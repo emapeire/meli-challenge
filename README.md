@@ -1,3 +1,1 @@
-# ml-challenge
-
-ML 🤝 Frontend Challenge 
+# MeLi 🤝 Frontend Challenge
