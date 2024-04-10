@@ -17,9 +17,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={inter.className}>
-      <body>
+      <body className='flex flex-col min-h-screen'>
         <Form />
-        <main className='max-w-screen-sm p-4 m-auto'>{children}</main>
+        <main className='flex-1 max-w-screen-sm px-4 py-12 m-auto'>
+          {children}
+        </main>
+        <footer className='h-8 text-center text-neutral-500 text-sm'>
+          <p>
+            Made with ❤️ by{' '}
+            <a
+              href='https://github.com/emapeire'
+              className='text-neutral-800 hover:underline'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              @emapeire
+            </a>
+          </p>
+        </footer>
       </body>
     </html>
   )

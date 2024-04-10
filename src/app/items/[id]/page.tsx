@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { api } from '@/lib/api'
 
 export default async function ItemPage({
@@ -9,7 +10,13 @@ export default async function ItemPage({
 
   return (
     <section className='grid gap-2'>
-      <img src={product.thumbnail} alt={product.title}></img>
+      <Image
+        src={product.thumbnail}
+        alt={product.title}
+        width={90}
+        height={90}
+        priority
+      />
       <p className='text-xl font-bold'>
         {Number(product.price).toLocaleString('es-AR', {
           style: 'currency',
