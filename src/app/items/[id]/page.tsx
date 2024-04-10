@@ -9,7 +9,7 @@ export default async function ItemPage({
   const { product, description } = await api.item.get(id)
 
   return (
-    <section className='grid gap-2'>
+    <section className='grid gap-4 border border-neutral-400 rounded p-4'>
       <Image
         src={product.thumbnail}
         alt={product.title}
@@ -24,7 +24,7 @@ export default async function ItemPage({
         })}
       </p>
       <p>{product.title}</p>
-      <hr />
+      <hr className='border-y-1 border-neutral-400' />
       <p>{description}</p>
     </section>
   )
