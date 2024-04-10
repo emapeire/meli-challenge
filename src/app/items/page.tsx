@@ -16,7 +16,7 @@ export default async function ItemsPage({
           <Link
             key={item.id}
             href={`/items/${item.id}`}
-            className='flex gap-x-4 border border-neutral-400 rounded py-4 h-32'
+            className='flex flex-col md:flex-row gap-4 border border-neutral-400 rounded md:py-4 md:px-2 p-4 md:h-32'
           >
             <Image
               src={item.thumbnail}
@@ -24,18 +24,21 @@ export default async function ItemsPage({
               width={90}
               height={90}
               priority
-              className='ml-2 rounded max-h-[90px] max-w-[90px]'
+              className='md:ml-2 rounded max-h-[90px] max-w-[90px]'
             />
-            <div>
+            <span className='md:hidden block opacity-50 text-xs'>
+              {item.seller.nickname}
+            </span>
+            <div className='flex flex-col gap-2'>
               <p className='text-xl font-bold'>
                 {Number(item.price).toLocaleString('es-AR', {
                   style: 'currency',
                   currency: item.currency_id
                 })}
               </p>
-              <p className='text-sm'>{item.title}</p>
+              <p className='md:text-sm'>{item.title}</p>
             </div>
-            <span className='ml-auto opacity-50 mr-4 text-xs'>
+            <span className='hidden md:block ml-auto opacity-50 mr-4 md:mt-1 text-xs'>
               {item.seller.nickname}
             </span>
           </Link>

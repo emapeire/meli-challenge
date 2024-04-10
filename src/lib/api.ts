@@ -34,8 +34,16 @@ export const api = {
             price: number
             thumbnail: string
             currency_id: string
-            seller: {
-              nickname: string
+            seller_address: {
+              city: {
+                name: string
+              }
+              state: {
+                name: string
+              }
+              country: {
+                name: string
+              }
             }
           }>
       )

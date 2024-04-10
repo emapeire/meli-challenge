@@ -17,13 +17,17 @@ export default async function ItemPage({
         height={90}
         priority
       />
+      <span className='text-neutral-500 text-sm'>
+        {product.seller_address.city.name}, {product.seller_address.state.name},{' '}
+        {product.seller_address.country.name}
+      </span>
       <p className='text-xl font-bold'>
         {Number(product.price).toLocaleString('es-AR', {
           style: 'currency',
           currency: product.currency_id
         })}
       </p>
-      <p>{product.title}</p>
+      <p className='font-semibold'>{product.title}</p>
       <hr className='border-y-1 border-neutral-400' />
       <p>{description}</p>
     </section>
