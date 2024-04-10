@@ -1,6 +1,6 @@
 export default function LoadingPage() {
   return (
-    <div className=''>
+    <div className='flex justify-center items-center'>
       <svg
         aria-hidden='true'
         className='w-8 h-8 text-gray-200 animate-spin fill-yellow-400'
