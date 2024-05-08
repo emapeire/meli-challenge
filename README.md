@@ -1,5 +1,7 @@
 # MeLi 🤝 Frontend Challenge
 
+![meli-challenge](https://github.com/emapeire/meli-challenge/assets/63935846/a50881b3-a175-46fd-9fe5-5159e76c3702)
+
 ## Instructions
 
 ### 📚 Summary
